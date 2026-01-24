@@ -1,7 +1,11 @@
 # ignore files
+*.env
 *.log
-*.var
 *_old
 
 # ignore folders
 _old/
+config/
+etc-pihole/
+nzbget/
+speedtest-config/

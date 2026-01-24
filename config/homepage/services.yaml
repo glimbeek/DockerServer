@@ -15,7 +15,7 @@
         widget:
           type: jellyseerr
           url: http://jellyseerr:5055
-          key: MTc2ODgyNTE3NzkyMTExMDczOTZhLTc5ZDgtNDFiZS05ZTdiLWYyYmVjZGMxMjIwMQ==
+          key: {{HOMEPAGE_VAR_JELLYSEERR_KEY}}
     - Radarr:
         icon: radarr.png
         href: http://192.168.0.45:7878        
@@ -25,8 +25,8 @@
         container: radarr
         widget:
           type: radarr
-          url: http://radarr:7878
-          key: d7a42fafd2b14990abb817014e28a1bf
+          url: http://192.168.0.45:7878  
+          key: {{HOMEPAGE_VAR_RADARR_KEY}}
     - Sonarr:
         icon: sonarr.png
         href: http://192.168.0.45:8989
@@ -37,7 +37,7 @@
         widget:
           type: sonarr
           url: http://sonarr:8989
-          key: 6cf806098de047a4b8a8fb51e772f5a3
+          key: {{HOMEPAGE_VAR_SONARR_KEY}}
     - Bazarr:
         icon: bazarr.png
         href: http://192.168.0.45:6767
@@ -48,7 +48,7 @@
         widget:
           type: bazarr
           url: http://bazarr:6767
-          key: 812d6ff04eb053a743d04d2af6993d04
+          key: {{HOMEPAGE_VAR_BAZARR_KEY}}
 
 - File Management:
     - Prowlarr:
@@ -61,7 +61,7 @@
         widget:
             type: prowlarr
             url: http://prowlarr:9696
-            key: 4722ddd76b38469690e2f93045793df4
+            key: {{HOMEPAGE_VAR_PROWLARR_KEY}}
 
     - Jellyfin:
         icon: jellyfin.png
@@ -73,7 +73,7 @@
         widget:
             type: jellyfin
             url: http://jellyfin:8096
-            key: f90e0f7dff6b49a98181c616ebcba5cc
+            key: {{HOMEPAGE_VAR_JELLYFIN_KEY}}
             enableBlocks: true # optional, defaults to false
             enableNowPlaying: true # optional, defaults to true
             enableUser: true # optional, defaults to false
@@ -91,8 +91,8 @@
         widget:
             type: nzbget
             url: http://nzbget:6789
-            username: nzbget
-            password: tegbzn6789
+            username: {{HOMEPAGE_VAR_NZBGET_USER}}
+            password: {{HOMEPAGE_VAR_NZBGET_PASS}}
 
 # - System Monitoring:
 #     - Glances Full Width:
@@ -149,8 +149,8 @@
         widget:
           type: diskstation
           url: http://192.168.0.11:5000/
-          username: remote_stats
-          password: hQZjmxpzOvFBpdM35qQS
+          username: {{HOMEPAGE_VAR_SYNO_USER}}
+          password: {{HOMEPAGE_VAR_SYNO_PASS}}
           volume: volume_1
     - Speedtest:
         #icon: speedtest-tracker.png

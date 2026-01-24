@@ -2,9 +2,9 @@
 x-lsiodefaults: &lsio-defaults # Define a reusable template
   restart: unless-stopped
   environment:
-    - PUID=1000
-    - PGID=1000
-    - TZ=Europe/Amsterdam
+    - PUID=${PUID}
+    - PGID=${PGID}
+    - TZ=${TIMEZONE}
 
 services:
   pihole:
@@ -15,8 +15,8 @@ services:
       # sudo systemctl stop systemd-resolved
       # sudo systemctl disable systemd-resolved.service
       # DNS Ports
-      - "192.168.0.45:53:53/tcp"
-      - "192.168.0.45:53:53/udp"
+      - "${SERVER_IP}:53:53/tcp"
+      - "${SERVER_IP}:53:53/udp"
       # Default HTTP Port
       - "80:80/tcp"
       # Default HTTPs Port. FTL will generate a self-signed certificate
@@ -27,9 +27,9 @@ services:
       #- "123:123/udp"
     environment:
       # Set the appropriate timezone for your location (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), e.g:
-      TZ: 'Europe/Amsterdam'
+      TZ: ${TIMEZONE}
       # Set a password to access the web interface. Not setting one will result in a random password being assigned
-      FTLCONF_webserver_api_password: 'correct horse battery staple apple'
+      FTLCONF_webserver_api_password: ${PIHOLE_WEBPASSWORD}
       # If using Docker's default `bridge` network setting the dns listening mode should be set to 'ALL'
       FTLCONF_dns_listeningMode: 'ALL'
       # Optional: Delay Pi-hole startup to wait for other services. Value is in seconds
@@ -72,7 +72,7 @@ services:
     container_name: jellyfin
     volumes:
       - ./config/jellyfin:/config
-      - /mnt/nas_streaming:/data
+      - ${MEDIA_DIR}:/data
     devices:
       - /dev/dri:/dev/dri      # CRITICAL: This enables hardware acceleration for the CPU
     ports:
@@ -95,7 +95,7 @@ services:
     container_name: radarr
     volumes:
       - ./config/radarr:/config
-      - /mnt/nas_streaming:/data
+      - ${MEDIA_DIR}:/data
     ports:
       - 7878:7878
 
@@ -106,7 +106,7 @@ services:
     container_name: sonarr
     volumes:
       - ./config/sonarr:/config
-      - /mnt/nas_streaming:/data
+      - ${MEDIA_DIR}:/data
     ports:
       - 8989:8989
 
@@ -117,7 +117,7 @@ services:
     container_name: bazarr
     volumes:
       - ./config/bazarr:/config
-      - /mnt/nas_streaming:/data
+      - ${MEDIA_DIR}:/data
     ports:
       - 6767:6767
 
@@ -128,7 +128,7 @@ services:
     container_name: nzbget
     volumes:
       - ./config/nzbget:/config # Configuration files
-      - /mnt/nas_streaming:/data # The final media storage location
+      - ${MEDIA_DIR}:/data # The final media storage location
       - ./nzbget/intermediate:/scratch # The SSD (Fast) download folder for unpacking
     ports:
       - 6789:6789
@@ -143,10 +143,21 @@ services:
     volumes:
       - ./config/homepage:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro # Allows it to show if containers are running
-      - /mnt/nas_streaming:/nas # Optional: Allows it to show disk usage of media drives
+      - ${MEDIA_DIR}:/nas # Optional: Allows it to show disk usage of media drives
       - /sys/class/hwmon:/sys/class/hwmon:ro  # Optional: Allows it to show CPU temperature
     environment:
-      - HOMEPAGE_ALLOWED_HOSTS=192.168.0.45:3000
+      - HOMEPAGE_ALLOWED_HOSTS=${SERVER_IP}:3000
+      - HOMEPAGE_VAR_JELLYFIN_KEY=${HOMEPAGE_VAR_JELLYFIN_KEY}
+      - HOMEPAGE_VAR_JELLYSEERR_KEY=${HOMEPAGE_VAR_JELLYSEERR_KEY}
+      - HOMEPAGE_VAR_RADARR_KEY=${HOMEPAGE_VAR_RADARR_KEY}
+      - HOMEPAGE_VAR_SONARR_KEY=${HOMEPAGE_VAR_SONARR_KEY}
+      - HOMEPAGE_VAR_BAZARR_KEY=${HOMEPAGE_VAR_BAZARR_KEY}
+      - HOMEPAGE_VAR_NZBGET_USER=${HOMEPAGE_VAR_NZBGET_USER}
+      - HOMEPAGE_VAR_NZBGET_PASS=${HOMEPAGE_VAR_NZBGET_PASS}
+      - HOMEPAGE_VAR_SYNO_USER=${HOMEPAGE_VAR_SYNO_USER}
+      - HOMEPAGE_VAR_SYNO_PASS=${HOMEPAGE_VAR_SYNO_PASS}
+      - HOMEPAGE_VAR_PROWLARR_KEY=${HOMEPAGE_VAR_PROWLARR_KEY}
+      - HOMEPAGE_VAR_SPEEDTEST_KEY=${HOMEPAGE_VAR_SPEEDTEST_KEY}
 
   ##############################
   #                            #
@@ -174,13 +185,13 @@ services:
       - 8080:80
       - 8443:443
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Amsterdam
-      - APP_KEY=base64:yxaQnly5RNl0IuiYXlT6QzFnUwfFbLnHeIpXpeniRhM=
-      - APP_URL=http://192.168.0.45:8080
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TIMEZONE}
+      - APP_KEY=${SPEEDTEST_APP_KEY}
+      - APP_URL=http://${SERVER_IP}:8080
       - DB_CONNECTION=sqlite
       - SPEEDTEST_SCHEDULE=0 */6 * * * # Runs every 6 hours
-      - DISPLAY_TIMEZONE=Europe/Amsterdam
+      - DISPLAY_TIMEZONE=${TIMEZONE}
     volumes:
       - ./speedtest-config:/config
