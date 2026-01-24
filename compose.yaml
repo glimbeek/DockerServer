@@ -141,7 +141,7 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./config/homepage:/app/config
+      - ./homepage-config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro # Allows it to show if containers are running
       - ${MEDIA_DIR}:/nas # Optional: Allows it to show disk usage of media drives
       - /sys/class/hwmon:/sys/class/hwmon:ro  # Optional: Allows it to show CPU temperature

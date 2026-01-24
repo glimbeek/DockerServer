@@ -1,7 +1,9 @@
 # ignore files
 *.env
 *.log
+*.logs
 *_old
+*.db
 
 # ignore folders
 _old/
@@ -11,3 +13,6 @@ logs/
 etc-pihole/
 nzbget/
 speedtest-config/
+
+# allow
+!homepage-config/
