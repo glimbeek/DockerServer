@@ -1,3 +1,7 @@
 # ignore files
 *.log
 *.var
+*_old
+
+# ignore folders
+_old/
