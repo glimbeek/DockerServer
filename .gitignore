@@ -5,7 +5,9 @@
 
 # ignore folders
 _old/
+cache/
 config/
+logs/
 etc-pihole/
 nzbget/
 speedtest-config/
