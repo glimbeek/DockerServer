@@ -1,6 +1,6 @@
 ﻿# --- Load Secrets from .env file ---
-$envFile = "/home/glimby/docker/.env"
-#$envFile = "C:\Users\gvanl\OneDrive\Documents\3.Git\DockerServer\.env"
+$envFile = "/home/glimby/docker/.env" 
+
 if (Test-Path $envFile) {
     Get-Content $envFile | Where-Object { $_ -match '=' -and $_ -notmatch '^\s*#' } | ForEach-Object {
         # Split into Name and Value, then trim whitespace
@@ -28,7 +28,7 @@ $botToken = $env:TG_BOT_TOKEN
 $TelegramApiUri = "https://api.telegram.org/bot" + $botToken
 $ChatID = $env:TG_CHAT_ID
 $AllowedIDs = $env:TG_ALLOWED_IDS
-$DockerServerLocation = "/home/glimby/docker" # "C:\DockerServer"
+$DockerServerLocation = "/home/glimby/docker"
 $LogFile = "/home/glimby/docker/bot_log.txt"
 
 # --- NZBGet Configuration ---
@@ -117,7 +117,6 @@ Function Get-TelegramUpdates() {
 
     Write-Host "JSON Returned"
 }
-
 
 # --- If there are updates, check if their are commands we need to process --- 
 Function Get-TelegramMessages {
