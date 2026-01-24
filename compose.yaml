@@ -146,6 +146,8 @@ services:
       - ${MEDIA_DIR}:/nas # Optional: Allows it to show disk usage of media drives
       - /sys/class/hwmon:/sys/class/hwmon:ro  # Optional: Allows it to show CPU temperature
     environment:
+      - HOMEPAGE_SERVER_IP={SERVER_IP}
+      - HOMEPAGE_NAS_IP=${NAS_IP}
       - HOMEPAGE_ALLOWED_HOSTS=${SERVER_IP}:3000
       - HOMEPAGE_VAR_JELLYFIN_KEY=${HOMEPAGE_VAR_JELLYFIN_KEY}
       - HOMEPAGE_VAR_JELLYSEERR_KEY=${HOMEPAGE_VAR_JELLYSEERR_KEY}
