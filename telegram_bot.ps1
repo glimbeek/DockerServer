@@ -1,16 +1,40 @@
-﻿# --- Global Configuration ---
+﻿# --- Load Secrets from .env file ---
+$envFile = "/home/glimby/docker/.env"
+#$envFile = "C:\Users\gvanl\OneDrive\Documents\3.Git\DockerServer\.env"
+if (Test-Path $envFile) {
+    Get-Content $envFile | Where-Object { $_ -match '=' -and $_ -notmatch '^\s*#' } | ForEach-Object {
+        # Split into Name and Value, then trim whitespace
+        $name, $value = $_.Split('=', 2).Trim()
+        
+        # Remove accidental quotes if you used them in the .env file
+        $value = $value -replace '^["'']|["'']$'
+        
+        # Set the variable so it can be accessed via $env:VAR_NAME
+        Set-Item -Path "Env:\$name" -Value $value
+    }
+    Write-Host "Successfully loaded secrets from ${envFile}" -ForegroundColor Cyan
+}
+else {
+    # Use ${} to tell PowerShell the variable name is exactly 'envFile'
+    $ErrorMsg = "Failed to load ${envFile}: $($Result.StatusCode) $($Result.StatusDescription)"
+    Write-Host -ForegroundColor Red $ErrorMsg
+    SendToLog -LogType Warning -LogMessage $ErrorMsg
+}
+
+# --- Global Configuration ---
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$botToken = "1878834395:AAFGDpYLWkg-OelD78jvBVXSe6UrqYAXHvo" # Do NOT Share This Key!!
+#$botToken = "1878834395:AAFGDpYLWkg-OelD78jvBVXSe6UrqYAXHvo" # Do NOT Share This Key!!
+$botToken = $env:TG_BOT_TOKEN
 $TelegramApiUri = "https://api.telegram.org/bot" + $botToken
-$ChatID = "-1001218488253"
-$AllowedIDs = 1847215214, 1337 # 1847215214 ID van George
+$ChatID = $env:TG_CHAT_ID
+$AllowedIDs = $env:TG_ALLOWED_IDS
 $DockerServerLocation = "/home/glimby/docker" # "C:\DockerServer"
 $LogFile = "/home/glimby/docker/bot_log.txt"
 
 # --- NZBGet Configuration ---
-$NZBGetUrl = "http://127.0.0.1:6789/jsonrpc"
-$NZBGetUsername = "nzbget"
-$NZBGetPassword = "tegbzn6789"
+$NZBGetUrl = $env:TG_NZBGET_URL
+$NZBGetUsername = $env:TG_NZBGET_USER
+$NZBGetPassword = $env:TG_NZBGET_PASS
 
 # --- If something in the script fails we want to log this --- 
 Function SendToLog

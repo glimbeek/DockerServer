@@ -1,0 +1,1899 @@
+[2026-01-20 10:03:58] [Information] Old log reached 10MB and was rotated.
+[2026-01-20 10:03:58] [Information] Telegram: 'Hello George!' sent to -1001218488253.
+[2026-01-20 11:20:45] [Information] Telegram: '
+Container Name CPU % Memory Usage Memory % Status
+-------------- ----- ------------ -------- ------
+nzbget         0.02% 22.73MiB     0.29%    Running
+bazarr         0.18% 234MiB       2.95%    Running
+radarr         0.04% 226.1MiB     2.85%    Running
+jellyfin       0.00% 509.3MiB     6.41%    Running
+prowlarr       0.11% 219.2MiB     2.76%    Running
+sonarr         0.05% 205.8MiB     2.59%    Running
+jellyseerr     0.00% 269.2MiB     3.39%    Running
+
+' sent to -1001218488253.
+[2026-01-20 11:31:22] [Information] Telegram: 'Hello George!' sent to -1001218488253.
+[2026-01-20 13:27:39] [Information] Telegram: 'Available Commands:
+/hello - Hello
+/stats - Container resource usage
+/nzb - NZBGet Download/Unpack status
+/restartall - Restart ALL containers
+/restart [name] - Restart one container
+/uptime - Host system uptime
+/reboot - Reboot the host server' sent to -1001218488253.
+[2026-01-20 13:28:45] [Information] Bot started.
+[2026-01-20 13:28:45] [Information] Telegram: 'I'm awake, I'm awake.' sent to -1001218488253.
+[2026-01-20 13:28:51] [Information] Telegram: 'Available Commands:
+/hello - Hello
+/stats - Container resource usage
+/logs [name] - View container logs
+/nzb - NZBGet Download/Unpack status
+/restartall - Restart ALL containers
+/restart [name] - Restart one container
+/uptime - Host system uptime
+/reboot - Reboot the host server' sent to -1001218488253.
+[2026-01-20 13:28:54] [Information] Telegram: 'Please specify a container name. Usage: /logs [container_name]' sent to -1001218488253.
+[2026-01-20 13:29:04] [Information] Telegram: '❌ Error: Container 'prawlerr' not found.' sent to -1001218488253.
+[2026-01-20 13:29:17] [Information] Telegram: '📄 *Logs for nzbget (Last 20 lines):*
+
+``To support LSIO projects visit:
+https://www.linuxserver.io/donate/
+
+───────────────────────────────────────
+GID/UID
+───────────────────────────────────────
+
+User UID:    1000
+User GID:    1000
+───────────────────────────────────────
+Linuxserver.io version: v25.4-ls226
+Build-date: 2026-01-09T15:43:00+00:00
+───────────────────────────────────────
+    
+[custom-init] No custom files found, skipping...
+[INFO] nzbget 25.4 server-mode
+[INFO] using /config/nzbget.conf
+[INFO] nzbget runs on 0.0.0.0:6789
+[ls.io-init] done.
+Connection to localhost (127.0.0.1) 6789 port [tcp/*] succeeded!
+``' sent to -1001218488253.
+[2026-01-20 13:31:28] [Information] Telegram: '
+Container Name CPU % Memory Usage Memory % Status
+-------------- ----- ------------ -------- ------
+nzbget         0.02% 6.793MiB     0.09%    Running
+radarr         0.10% 124.4MiB     1.57%    Running
+bazarr         0.20% 234.9MiB     2.96%    Running
+jellyfin       0.01% 592.2MiB     7.46%    Running
+prowlarr       0.16% 114.9MiB     1.45%    Running
+sonarr         0.08% 239.1MiB     3.01%    Running
+jellyseerr     0.00% 279.8MiB     3.52%    Running
+
+' sent to -1001218488253.
+[2026-01-20 13:31:41] [Information] Telegram: '📄 *Logs for prowlarr (Last 20 lines):*
+
+``[Info] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down. 
+[Info] Microsoft.Hosting.Lifetime: Hosting environment: Production 
+[Info] Microsoft.Hosting.Lifetime: Content root path: /app/prowlarr/bin 
+[ls.io-init] done.
+[Warn] Newznab: HTTP Error - Res: HTTP/2.0 [GET] https://nzbfinder.ws/api?t=search&extended=1&apikey=(removed) 400.BadRequest (103 bytes)
+<?xml version="1.0" encoding="UTF-8"?>
+<error code="500" description="Request limit reached (15/15)"/>
+ 
+[Warn] Newznab: Unable to connect to indexer 
+
+[v2.3.0.5236] NzbDrone.Core.Indexers.Newznab.NewznabException: Request limit reached (15/15)
+   at NzbDrone.Core.Indexers.Newznab.NewznabRssParser.CheckError(XDocument xdoc, IndexerResponse indexerResponse) in ./NzbDrone.Core/Indexers/Definitions/Newznab/NewznabRssParser.cs:line 56
+   at NzbDrone.Core.Indexers.Newznab.NewznabRssParser.PreProcess(IndexerResponse indexerResponse) in ./NzbDrone.Core/Indexers/Definitions/Newznab/NewznabRssParser.cs:line 69
+   at NzbDrone.Core.Indexers.RssParser.ParseResponse(IndexerResponse indexerResponse) in ./NzbDrone.Core/Indexers/RssParser.cs:line 55
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.FetchPage(IndexerRequest request, IParseIndexerResponse parser) in ./NzbDrone.Core/Indexers/HttpIndexerBase.cs:line 591
+   at NzbDrone.Core.Indexers.HttpIndexerBase`1.TestConnection() in ./NzbDrone.Core/Indexers/HttpIndexerBase.cs:line 764
+RequestUri: https://nzbfinder.ws/api?t=search&extended=1&apikey=(removed) BadRequest;ContentType: text/xml; charset=utf-8;ContentLength: 103;ContentSample: <?xml version="1.0" encoding="UTF-8"?>
+<error code="500" description="Request limit reached (15/15)"/>
+
+
+``' sent to -1001218488253.
+[2026-01-20 13:50:26] [Information] Telegram: 'Available Commands:
+/hello - Hello
+/stats - Container resource usage
+/logs [name] - View container logs
+/nzb - NZBGet Download/Unpack status
+/restartall - Restart ALL containers
+/restart [name] - Restart one container
+/uptime - Host system uptime
+/reboot - Reboot the host server' sent to -1001218488253.
+[2026-01-20 13:50:28] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Dark.Knight.2008.2160p.UHD.BluRay.REMUX.Hybrid.DV.HDR10.HEVC.DTS-HD.MA.5.1-MrTentsaw*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 0%
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.HDR.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+🎥 *Tetris.2023.2160p.ATVP.WEB-DL.DDP5.1.Atmos.HEVC-CMRG*
+⚙️ Status: QUEUED
+---
+🎥 *The.American.Revolution.2025.S01E01.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *The.American.Revolution.2025.S01E02.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *The.American.Revolution.2025.S01E03.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *The.American.Revolution.2025.S01E04.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *The.American.Revolution.2025.S01E05.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *The.American.Revolution.2025.S01E06.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-20 13:58:03] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.American.Revolution.2025.S01E01.2160p.WEB.h265-BAE*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 18.5%
+---
+🎥 *The.American.Revolution.2025.S01E04.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *The.American.Revolution.2025.S01E03.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *The.American.Revolution.2025.S01E05.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *The.American.Revolution.2025.S01E02.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *The.American.Revolution.2025.S01E06.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *Tetris.2023.2160p.ATVP.WEB-DL.DDP5.1.Atmos.HEVC-CMRG*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.2160p.UHD.BluRay.REMUX.Hybrid.DV.HDR10.HEVC.DTS-HD.MA.5.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.DV.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-20 17:08:56] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.American.Revolution.2025.S01E05.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX-FraMeSToR-AsRequested*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 24.3%
+---
+🎥 *Fly.Me.to.the.Moon.2024.2160p.ATVP.WEB-DL.DV.HDR10.PLUS.ENG.LATINO.DDP5.1.Atmos.H265.MKV-BEN.THE.MEN*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-20 17:38:42] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.American.Revolution.2025.S01E05.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX-FraMeSToR-AsRequested*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 45.4%
+---
+🎥 *Fly.Me.to.the.Moon.2024.2160p.ATVP.WEB-DL.DV.HDR10.PLUS.ENG.LATINO.DDP5.1.Atmos.H265.MKV-BEN.THE.MEN*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-20 17:42:50] [Information] Telegram: '
+Container Name CPU % Memory Usage Memory % Status
+-------------- ----- ------------ -------- ------
+sonarr         0.14% 170MiB       2.14%    Running
+nzbget         7.08% 169.2MiB     2.13%    Running
+radarr         0.10% 223.8MiB     2.82%    Running
+bazarr         0.21% 209.4MiB     2.64%    Running
+jellyfin       0.04% 735.8MiB     9.26%    Running
+prowlarr       0.06% 132.8MiB     1.67%    Running
+jellyseerr     0.00% 213.1MiB     2.68%    Running
+
+' sent to -1001218488253.
+[2026-01-20 17:47:21] [Information] Telegram: 'Available Commands:
+/hello - Hello
+/stats - Container resource usage
+/logs [name] - View container logs
+/nzb - NZBGet Download/Unpack status
+/restartall - Restart ALL containers
+/restart [name] - Restart one container
+/uptime - Host system uptime
+/reboot - Reboot the host server' sent to -1001218488253.
+[2026-01-20 17:47:27] [Information] Telegram: 'up 7 hours, 56 minutes' sent to -1001218488253.
+[2026-01-20 18:21:11] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.American.Revolution.2025.S01E05.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX-FraMeSToR-AsRequested*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 75.4%
+---
+🎥 *Fly.Me.to.the.Moon.2024.2160p.ATVP.WEB-DL.DV.HDR10.PLUS.ENG.LATINO.DDP5.1.Atmos.H265.MKV-BEN.THE.MEN*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-20 19:01:06] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.American.Revolution.2025.S01E05.2160p.WEB.h265-BAE*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.2160p.WEB-DL.SDR.ENG.LATINO.DDP5.1.Atmos.H265-BEN.THE.MEN*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 0%
+---
+' sent to -1001218488253.
+[2026-01-20 19:02:47] [Information] Telegram: '
+Container Name CPU % Memory Usage Memory % Status
+-------------- ----- ------------ -------- ------
+sonarr         0.17% 186.8MiB     2.35%    Running
+nzbget         0.01% 103.5MiB     1.30%    Running
+radarr         0.05% 283.1MiB     3.56%    Running
+bazarr         0.18% 254MiB       3.20%    Running
+jellyfin       0.06% 695.1MiB     8.75%    Running
+prowlarr       0.11% 153.3MiB     1.93%    Running
+jellyseerr     0.00% 210MiB       2.64%    Running
+
+' sent to -1001218488253.
+[2026-01-21 08:59:18] [Information] Bot started.
+[2026-01-21 08:59:18] [Information] Telegram: 'I'm awake, I'm awake.' sent to -1001218488253.
+[2026-01-21 08:59:19] [Information] Telegram: 'Hello George!' sent to -1001218488253.
+[2026-01-21 08:59:21] [Information] Telegram: 'Hello George!' sent to -1001218488253.
+[2026-01-21 08:59:24] [Information] Telegram: '
+Container Name CPU %   Memory Usage Memory % Status
+-------------- -----   ------------ -------- ------
+sonarr         0.05%   233.7MiB     2.94%    Running
+nzbget         0.01%   17.51MiB     0.22%    Running
+radarr         0.08%   262MiB       3.30%    Running
+bazarr         0.13%   223.3MiB     2.81%    Running
+jellyfin       223.93% 1.151GiB     14.84%   Running
+prowlarr       0.07%   178.8MiB     2.25%    Running
+jellyseerr     0.00%   218.2MiB     2.75%    Running
+
+' sent to -1001218488253.
+[2026-01-21 08:59:25] [Information] Telegram: 'Hello George!' sent to -1001218488253.
+[2026-01-21 09:49:21] [Information] Telegram: 'Hello George!' sent to -1001218488253.
+[2026-01-21 09:49:28] [Information] Telegram: '
+Container Name CPU % Memory Usage Memory % Status
+-------------- ----- ------------ -------- ------
+sonarr         0.04% 234.1MiB     2.95%    Running
+nzbget         0.01% 17.52MiB     0.22%    Running
+radarr         0.04% 268.3MiB     3.38%    Running
+bazarr         0.13% 239.8MiB     3.02%    Running
+jellyfin       0.00% 878.4MiB     11.06%   Running
+prowlarr       0.04% 180.1MiB     2.27%    Running
+jellyseerr     0.00% 230.2MiB     2.90%    Running
+
+' sent to -1001218488253.
+[2026-01-21 16:56:51] [Information] Telegram: '
+Container Name CPU % Memory Usage Memory % Status
+-------------- ----- ------------ -------- ------
+nzbget         0.02% 22.77MiB     0.29%    Running
+bazarr         0.16% 200.8MiB     2.53%    Running
+jellyfin       0.00% 342.2MiB     4.31%    Running
+radarr         0.10% 151.6MiB     1.91%    Running
+sonarr         0.04% 142.3MiB     1.79%    Running
+prowlarr       0.05% 139.5MiB     1.76%    Running
+jellyseerr     0.00% 232.3MiB     2.93%    Running
+
+' sent to -1001218488253.
+[2026-01-21 16:57:04] [Information] Telegram: '📄 *Logs for nzbget (Last 20 lines):*
+
+`[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+[WARNING] Blocking news.sunnyusenet.com (news.sunnyusenet.com) for 10 sec
+`' sent to -1001218488253.
+[2026-01-21 18:46:13] [Information] Telegram: 'Available Commands:
+/hello - Hello
+/stats - Container resource usage
+/logs [name] - View container logs
+/nzb - NZBGet Download/Unpack status
+/restartall - Restart ALL containers
+/restart [name] - Restart one container
+/uptime - Host system uptime
+/reboot - Reboot the host server' sent to -1001218488253.
+[2026-01-21 18:46:23] [Information] Telegram: 'up 20 hours, 21 minutes' sent to -1001218488253.
+[2026-01-21 18:49:54] [Information] Bot started.
+[2026-01-21 18:49:54] [Information] Telegram: 'I'm awake, I'm awake.' sent to -1001218488253.
+[2026-01-21 18:50:00] [Information] Telegram: 'Available Commands:
+/hello - Hello
+/stats - Container resource usage
+/disk - Disk space usage
+/logs [name] - View container logs
+/nzb - NZBGet Download/Unpack status
+/restartall - Restart ALL containers
+/restart [name] - Restart one container
+/uptime - Host system uptime
+/reboot - Reboot the host server' sent to -1001218488253.
+[2026-01-21 18:50:02] [Information] Telegram: '💾 *Disk Space Report*
+
+``
+Drive        Used Available Use%
+-----        ---- --------- ----
+Local (sda1) 15G  373G      4%
+NAS (NFS)    389G 3,2T      11%
+
+``' sent to -1001218488253.
+[2026-01-21 18:50:57] [Information] Bot started.
+[2026-01-21 18:50:58] [Information] Telegram: 'I'm awake, I'm awake.' sent to -1001218488253.
+[2026-01-21 18:51:01] [Information] Telegram: '💾 *Disk Space Report*
+
+
+Drive        Used Available Use%
+-----        ---- --------- ----
+Local (sda1) 15G  373G      4%
+NAS (NFS)    392G 3,2T      11%
+
+' sent to -1001218488253.
+[2026-01-21 18:51:14] [Information] Bot started.
+[2026-01-21 18:51:14] [Information] Telegram: 'I'm awake, I'm awake.' sent to -1001218488253.
+[2026-01-21 18:51:15] [Information] Telegram: '💾 *Disk Space Report*
+
+Drive        Used Available Use%
+-----        ---- --------- ----
+Local (sda1) 15G  373G      4%
+NAS (NFS)    392G 3,2T      11%
+
+' sent to -1001218488253.
+[2026-01-21 18:51:22] [Information] Telegram: 'Available Commands:
+/hello - Hello
+/stats - Container resource usage
+/disk - Disk space usage
+/logs [name] - View container logs
+/nzb - NZBGet Download/Unpack status
+/restartall - Restart ALL containers
+/restart [name] - Restart one container
+/uptime - Host system uptime
+/reboot - Reboot the host server' sent to -1001218488253.
+[2026-01-21 18:51:27] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Hijack.2023.S01E02.3.Degrees.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 41%
+---
+🎥 *Hijack.2023.S01E06.Comply.Slowly.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Hijack.2023.S01E07.Brace.Brace.Brace.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Hijack.2023.S01E01.Final.Call.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-21 19:26:40] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Hijack.2023.S01E06.Comply.Slowly.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 62.6%
+---
+🎥 *Hijack.2023.S01E07.Brace.Brace.Brace.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Hijack.2023.S01E01.Final.Call.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Moonlight.2016.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+🎥 *The.Wild.Robot.2024.UHD.BluRay.2160p.TrueHD.Atmos.7.1.DV.HEVC.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-22 08:43:56] [Information] Bot started.
+[2026-01-22 08:43:57] [Information] Telegram: 'I'm awake, I'm awake.' sent to -1001218488253.
+[2026-01-22 08:43:58] [Information] Telegram: 'Hello George!' sent to -1001218488253.
+[2026-01-22 08:47:56] [Information] Telegram: '❌ NZBGet Error: Check your Username/Password or IP.
+
+Details: Connection refused (127.0.0.1:6789)' sent to -1001218488253.
+[2026-01-22 08:53:49] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Hijack.2023.S01E06.Comply.Slowly.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 95.2%
+---
+🎥 *Hijack.2023.S01E07.Brace.Brace.Brace.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Hijack.2023.S01E01.Final.Call.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Moonlight.2016.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+🎥 *The.Wild.Robot.2024.UHD.BluRay.2160p.TrueHD.Atmos.7.1.DV.HEVC.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-22 10:16:26] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Hijack.2023.S01E07.Brace.Brace.Brace.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 63.5%
+---
+🎥 *Hijack.2023.S01E01.Final.Call.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Moonlight.2016.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+🎥 *The.Wild.Robot.2024.UHD.BluRay.2160p.TrueHD.Atmos.7.1.DV.HEVC.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-22 10:34:00] [Information] Telegram: 'up 1 hour, 50 minutes' sent to -1001218488253.
+[2026-01-22 10:34:07] [Information] Telegram: 'Available Commands:
+/hello - Hello
+/stats - Container resource usage
+/disk - Disk space usage
+/logs [name] - View container logs
+/nzb - NZBGet Download/Unpack status
+/restartall - Restart ALL containers
+/restart [name] - Restart one container
+/uptime - Host system uptime
+/reboot - Reboot the host server' sent to -1001218488253.
+[2026-01-22 10:34:25] [Information] Telegram: '💾 *Disk Space Report*
+
+Drive        Used Available Use%
+-----        ---- --------- ----
+Local (sda1) 15G  373G      4%
+NAS (NFS)    859G 2,8T      24%
+
+' sent to -1001218488253.
+[2026-01-22 13:33:00] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Moonlight.2016.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX-FraMeSToR*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 10.2%
+---
+🎥 *The.Wild.Robot.2024.UHD.BluRay.2160p.TrueHD.Atmos.7.1.DV.HEVC.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-22 13:33:12] [Information] Telegram: '💾 *Disk Space Report*
+
+Drive        Used Available Use%
+-----        ---- --------- ----
+Local (sda1) 15G  373G      4%
+NAS (NFS)    872G 2,8T      24%
+
+' sent to -1001218488253.
+[2026-01-22 15:41:10] [Information] Telegram: '💾 *Disk Space Report*
+
+Drive        Used Available Use%
+-----        ---- --------- ----
+Local (sda1) 15G  373G      4%
+NAS (NFS)    885G 2,8T      25%
+
+' sent to -1001218488253.
+[2026-01-22 15:41:20] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Moonlight.2016.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX-FraMeSToR*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 39.7%
+---
+🎥 *The.Wild.Robot.2024.UHD.BluRay.2160p.TrueHD.Atmos.7.1.DV.HEVC.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-22 17:05:21] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Moonlight.2016.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX-FraMeSToR*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 60.1%
+---
+🎥 *The.Wild.Robot.2024.UHD.BluRay.2160p.TrueHD.Atmos.7.1.DV.HEVC.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-22 19:33:01] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Wild.Robot.2024.2160p.BluRay.DoVi.x265.10bit.Atmos.TrueHD7.1-WiKi*
+⚙️ Status: QUEUED
+---
+🎥 *Moonlight.2016.2160p.UHD.BluRay.X265-IAMABLE*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.NORDiC.2160p.SDR.BluRay.DTS-HD.MA.TrueHD.5.1.x265-NorTekst*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E01.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e02.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E03.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e04.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e05.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E06.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E06.Road.Trip.2160p.ATVP.WEB-DL.DDP5.1.Atmos.DV.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E07.The.Office.Party.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E08.Young.Darcy.Mysteries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E09.Boundaries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E10.2160p.WEB.h265-ETHEL*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.HDR.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-22 19:33:02] [Information] Telegram: 'Hello George!' sent to -1001218488253.
+[2026-01-22 19:33:25] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Wild.Robot.2024.2160p.BluRay.DoVi.x265.10bit.Atmos.TrueHD7.1-WiKi*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 78.4%
+---
+🎥 *Moonlight.2016.2160p.UHD.BluRay.X265-IAMABLE*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.NORDiC.2160p.SDR.BluRay.DTS-HD.MA.TrueHD.5.1.x265-NorTekst*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E01.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e02.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E03.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e04.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e05.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E06.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E06.Road.Trip.2160p.ATVP.WEB-DL.DDP5.1.Atmos.DV.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E07.The.Office.Party.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E08.Young.Darcy.Mysteries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E09.Boundaries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E10.2160p.WEB.h265-ETHEL*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.HDR.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-22 19:40:52] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Wild.Robot.2024.2160p.BluRay.DoVi.x265.10bit.Atmos.TrueHD7.1-WiKi*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 85.1%
+---
+🎥 *Moonlight.2016.2160p.UHD.BluRay.X265-IAMABLE*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.NORDiC.2160p.SDR.BluRay.DTS-HD.MA.TrueHD.5.1.x265-NorTekst*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E01.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e02.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E03.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e04.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e05.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E06.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E06.Road.Trip.2160p.ATVP.WEB-DL.DDP5.1.Atmos.DV.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E07.The.Office.Party.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E08.Young.Darcy.Mysteries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E09.Boundaries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E10.2160p.WEB.h265-ETHEL*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.HDR.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-22 19:52:48] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Wild.Robot.2024.2160p.BluRay.DoVi.x265.10bit.Atmos.TrueHD7.1-WiKi*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 96.5%
+---
+🎥 *Moonlight.2016.2160p.UHD.BluRay.X265-IAMABLE*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.NORDiC.2160p.SDR.BluRay.DTS-HD.MA.TrueHD.5.1.x265-NorTekst*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E01.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e02.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E03.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e04.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e05.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E06.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E06.Road.Trip.2160p.ATVP.WEB-DL.DDP5.1.Atmos.DV.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E07.The.Office.Party.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E08.Young.Darcy.Mysteries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E09.Boundaries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E10.2160p.WEB.h265-ETHEL*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.HDR.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-22 19:53:08] [Information] Telegram: '
+Container Name CPU %  Memory Usage Memory % Status
+-------------- -----  ------------ -------- ------
+nzbget         13.43% 2.288GiB     39.52%   Running
+bazarr         0.22%  212.1MiB     3.58%    Running
+jellyfin       0.01%  520.5MiB     8.78%    Running
+sonarr         0.24%  319.7MiB     5.39%    Running
+prowlarr       0.05%  194MiB       3.27%    Running
+radarr         0.09%  298.4MiB     5.04%    Running
+jellyseerr     0.00%  261.7MiB     4.42%    Running
+
+' sent to -1001218488253.
+[2026-01-22 19:53:15] [Information] Telegram: 'Available Commands:
+/hello - Hello
+/stats - Container resource usage
+/disk - Disk space usage
+/logs [name] - View container logs
+/nzb - NZBGet Download/Unpack status
+/restartall - Restart ALL containers
+/restart [name] - Restart one container
+/uptime - Host system uptime
+/reboot - Reboot the host server' sent to -1001218488253.
+[2026-01-22 19:53:20] [Information] Telegram: '💾 *Disk Space Report*
+
+Drive        Used Available Use%
+-----        ---- --------- ----
+Local (sda1) 15G  373G      4%
+NAS (NFS)    832G 2,8T      23%
+
+' sent to -1001218488253.
+[2026-01-22 19:53:27] [Information] Telegram: 'up 11 hours, 9 minutes' sent to -1001218488253.
+[2026-01-22 20:09:30] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Wild.Robot.2024.2160p.BluRay.DoVi.x265.10bit.Atmos.TrueHD7.1-WiKi*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 112.6%
+---
+🎥 *Moonlight.2016.2160p.UHD.BluRay.X265-IAMABLE*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.NORDiC.2160p.SDR.BluRay.DTS-HD.MA.TrueHD.5.1.x265-NorTekst*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E01.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e02.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E03.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e04.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e05.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E06.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E06.Road.Trip.2160p.ATVP.WEB-DL.DDP5.1.Atmos.DV.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E07.The.Office.Party.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E08.Young.Darcy.Mysteries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E09.Boundaries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E10.2160p.WEB.h265-ETHEL*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.HDR.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-22 20:23:37] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Wild.Robot.2024.2160p.BluRay.DoVi.x265.10bit.Atmos.TrueHD7.1-WiKi*
+⚙️ Status: VERIFYING_SOURCES
+📦 `Processing...` 
+⏳ Progress: [□□□□□□□□□□] 5%
+---
+🎥 *Moonlight.2016.2160p.UHD.BluRay.X265-IAMABLE*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 13.1%
+---
+🎥 *The.Dark.Knight.2008.NORDiC.2160p.SDR.BluRay.DTS-HD.MA.TrueHD.5.1.x265-NorTekst*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E01.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e02.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E03.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e04.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e05.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E06.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E06.Road.Trip.2160p.ATVP.WEB-DL.DDP5.1.Atmos.DV.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E07.The.Office.Party.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E08.Young.Darcy.Mysteries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E09.Boundaries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E10.2160p.WEB.h265-ETHEL*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.HDR.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+🎥 *The.Smashing.Machine.2025.1080p.Remux.AVC.TrueHD.Atmos.7.1-playBD*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part02.REPACK.PROPER.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: QUEUED
+---
+🎥 *The.Beauty.S01E01.Beautiful.Pilot.1080p.DSNP.WEB-DL.DDP5.1.H.264-playWEB*
+⚙️ Status: QUEUED
+---
+🎥 *The.Beauty.S01E02.1080p.WEB.h264-ETHEL*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part01.1080p.BluRay.H264.AAC-RARBG-Obfuscated*
+⚙️ Status: QUEUED
+---
+🎥 *The.Beauty.S01E03.Beautiful.Christopher.Cross.1080p.DSNP.WEB-DL.DDP5.1.H.264-playWEB*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part03.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part04.1080p.BluRay.H264.AAC-RARBG-Obfuscated*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part05.1080p.BluRay.H264.AAC-RARBG-Obfuscated*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part06.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part07.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-22 21:13:38] [Information] Telegram: 'Hello George!' sent to -1001218488253.
+[2026-01-22 21:13:46] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Wild.Robot.2024.2160p.BluRay.DoVi.x265.10bit.Atmos.TrueHD7.1-WiKi*
+⚙️ Status: VERIFYING_SOURCES
+📦 `Processing...` 
+⏳ Progress: [■■■□□□□□□□] 32%
+---
+🎥 *Moonlight.2016.2160p.UHD.BluRay.X265-IAMABLE*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 77%
+---
+🎥 *The.Dark.Knight.2008.NORDiC.2160p.SDR.BluRay.DTS-HD.MA.TrueHD.5.1.x265-NorTekst*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E01.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e02.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E03.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e04.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *platonic.2023.s02e05.2160p.web.h265-successfulcrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E06.2160p.WEB.H265-SuccessfulCrab*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E06.Road.Trip.2160p.ATVP.WEB-DL.DDP5.1.Atmos.DV.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E07.The.Office.Party.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E08.Young.Darcy.Mysteries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S02E09.Boundaries.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S02E10.2160p.WEB.h265-ETHEL*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.HDR.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+🎥 *The.Smashing.Machine.2025.1080p.Remux.AVC.TrueHD.Atmos.7.1-playBD*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part02.REPACK.PROPER.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: QUEUED
+---
+🎥 *The.Beauty.S01E01.Beautiful.Pilot.1080p.DSNP.WEB-DL.DDP5.1.H.264-playWEB*
+⚙️ Status: QUEUED
+---
+🎥 *The.Beauty.S01E02.1080p.WEB.h264-ETHEL*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part01.1080p.BluRay.H264.AAC-RARBG-Obfuscated*
+⚙️ Status: QUEUED
+---
+🎥 *The.Beauty.S01E03.Beautiful.Christopher.Cross.1080p.DSNP.WEB-DL.DDP5.1.H.264-playWEB*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part03.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part04.1080p.BluRay.H264.AAC-RARBG-Obfuscated*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part05.1080p.BluRay.H264.AAC-RARBG-Obfuscated*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part06.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part07.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part08.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part09.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part10.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: QUEUED
+---
+🎥 *The.Studio.2025.S01.1080p.WEBRip.x265-KONTRAST*
+⚙️ Status: QUEUED
+---
+🎥 *Robin.Hood.2010.Theatrical.Cut.BluRay.1080p.DTS-X.7.1.AVC.HYBRID.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+🎥 *Kingdom.of.Heaven.2005.1080p.BluRay.REMUX.AC-3.TrueHD7.1.Atmos.AVC-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.Two.2024.1080p.BluRay.REMUX.AVC.H.264.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Jurassic.Park.1993.REPACK.BluRay.1080p.DTS-X.7.1.VC-1.HYBRID.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.One.2021.1080p.BluRay.REMUX.AVC.H.264.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Sisu.Road.To.Revenge.2025.1080p.WEB-DL.DUAL.DDP5.1.H.264-TURG*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-23 05:52:22] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Vietnam.War.2017.Part06.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: UNPACKING
+📦 `Processing...` 
+⏳ Progress: [■■□□□□□□□□] 23%
+---
+🎥 *The.Vietnam.War.2017.Part07.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: PP_QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part08.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: PP_QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part09.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 15.3%
+---
+🎥 *The.Vietnam.War.2017.Part10.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: QUEUED
+---
+🎥 *The.Studio.2025.S01.1080p.WEBRip.x265-KONTRAST*
+⚙️ Status: QUEUED
+---
+🎥 *Robin.Hood.2010.Theatrical.Cut.BluRay.1080p.DTS-X.7.1.AVC.HYBRID.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+🎥 *Kingdom.of.Heaven.2005.1080p.BluRay.REMUX.AC-3.TrueHD7.1.Atmos.AVC-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.Two.2024.1080p.BluRay.REMUX.AVC.H.264.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Jurassic.Park.1993.REPACK.BluRay.1080p.DTS-X.7.1.VC-1.HYBRID.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.One.2021.1080p.BluRay.REMUX.AVC.H.264.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Sisu.Road.To.Revenge.2025.1080p.WEB-DL.DUAL.DDP5.1.H.264-TURG*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01.1080p.BluRay.x264-BORDURE*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01.1080p.BluRay.x264-BORDURE*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E01.Good.News.About.Hell.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E02.Half.Loop.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E03.In.Perpetuity.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E04.The.You.You.Are.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E05.The.Grim.Barbarity.Of.Optics.and.Design.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E06.Hide.and.Seek.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E07.Defiant.Jazz.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E08.Whats.for.Dinner.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E09.The.We.We.Are.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S02.1080p.10bit.WEBRip.6CH.x265-PSA*
+⚙️ Status: QUEUED
+---
+🎥 *The.Wild.Robot.2024.2160p.UHD.BluRay.TrueHD.7.1.Atmos.HDR10P.DV.x265-SPHD*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.UHD.2160p.4K.BluRay.HDR.DTS.x265.-HDRINVASION*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E02.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.DV.HDR.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E03.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E04.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E05.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E06.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E07.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E08.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E09.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E10.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.DV.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-23 05:55:17] [Information] Telegram: '💾 *Disk Space Report*
+
+Drive        Used Available Use%
+-----        ---- --------- ----
+Local (sda1) 17G  371G      5%
+NAS (NFS)    928G 2,7T      26%
+
+' sent to -1001218488253.
+[2026-01-23 06:21:44] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Vietnam.War.2017.Part08.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: UNPACKING
+📦 `Processing...` 
+⏳ Progress: [■□□□□□□□□□] 16%
+---
+🎥 *The.Vietnam.War.2017.Part09.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: PP_QUEUED
+---
+🎥 *The.Vietnam.War.2017.Part10.1080p.BluRay.H264.AAC-RARBG-postbot*
+⚙️ Status: PP_QUEUED
+---
+🎥 *The.Studio.2025.S01.1080p.WEBRip.x265-KONTRAST*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 20.8%
+---
+🎥 *Robin.Hood.2010.Theatrical.Cut.BluRay.1080p.DTS-X.7.1.AVC.HYBRID.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+🎥 *Kingdom.of.Heaven.2005.1080p.BluRay.REMUX.AC-3.TrueHD7.1.Atmos.AVC-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.Two.2024.1080p.BluRay.REMUX.AVC.H.264.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Jurassic.Park.1993.REPACK.BluRay.1080p.DTS-X.7.1.VC-1.HYBRID.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.One.2021.1080p.BluRay.REMUX.AVC.H.264.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Sisu.Road.To.Revenge.2025.1080p.WEB-DL.DUAL.DDP5.1.H.264-TURG*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01.1080p.BluRay.x264-BORDURE*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01.1080p.BluRay.x264-BORDURE*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E01.Good.News.About.Hell.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E02.Half.Loop.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E03.In.Perpetuity.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E04.The.You.You.Are.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E05.The.Grim.Barbarity.Of.Optics.and.Design.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E06.Hide.and.Seek.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E07.Defiant.Jazz.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E08.Whats.for.Dinner.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E09.The.We.We.Are.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S02.1080p.10bit.WEBRip.6CH.x265-PSA*
+⚙️ Status: QUEUED
+---
+🎥 *The.Wild.Robot.2024.2160p.UHD.BluRay.TrueHD.7.1.Atmos.HDR10P.DV.x265-SPHD*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.UHD.2160p.4K.BluRay.HDR.DTS.x265.-HDRINVASION*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E02.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.DV.HDR.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E03.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E04.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E05.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E06.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E07.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E08.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E09.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E10.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.DV.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-23 06:21:49] [Information] Telegram: '
+Container Name CPU %  Memory Usage Memory % Status
+-------------- -----  ------------ -------- ------
+nzbget         22.19% 1.565GiB     27.03%   Running
+bazarr         0.18%  283.3MiB     4.78%    Running
+jellyfin       0.06%  578.2MiB     9.76%    Running
+sonarr         0.26%  285.3MiB     4.81%    Running
+prowlarr       0.06%  150.1MiB     2.53%    Running
+radarr         0.17%  240.5MiB     4.06%    Running
+jellyseerr     0.00%  253.7MiB     4.28%    Running
+
+' sent to -1001218488253.
+[2026-01-23 07:55:01] [Information] Telegram: '
+Container Name CPU %  Memory Usage Memory % Status
+-------------- -----  ------------ -------- ------
+nzbget         14.28% 2.074GiB     35.84%   Running
+bazarr         0.60%  254.4MiB     4.29%    Running
+jellyfin       6.63%  631.3MiB     10.65%   Running
+sonarr         17.04% 290.7MiB     4.91%    Running
+prowlarr       0.08%  145.6MiB     2.46%    Running
+radarr         10.06% 241MiB       4.07%    Running
+jellyseerr     0.00%  256MiB       4.32%    Running
+
+' sent to -1001218488253.
+[2026-01-23 07:55:05] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Robin.Hood.2010.Theatrical.Cut.BluRay.1080p.DTS-X.7.1.AVC.HYBRID.REMUX-FraMeSToR*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 49.6%
+---
+🎥 *Kingdom.of.Heaven.2005.1080p.BluRay.REMUX.AC-3.TrueHD7.1.Atmos.AVC-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.Two.2024.1080p.BluRay.REMUX.AVC.H.264.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Jurassic.Park.1993.REPACK.BluRay.1080p.DTS-X.7.1.VC-1.HYBRID.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.One.2021.1080p.BluRay.REMUX.AVC.H.264.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Sisu.Road.To.Revenge.2025.1080p.WEB-DL.DUAL.DDP5.1.H.264-TURG*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01.1080p.BluRay.x264-BORDURE*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01.1080p.BluRay.x264-BORDURE*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E01.Good.News.About.Hell.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E02.Half.Loop.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E03.In.Perpetuity.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E04.The.You.You.Are.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E05.The.Grim.Barbarity.Of.Optics.and.Design.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E06.Hide.and.Seek.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E07.Defiant.Jazz.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E08.Whats.for.Dinner.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E09.The.We.We.Are.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S02.1080p.10bit.WEBRip.6CH.x265-PSA*
+⚙️ Status: QUEUED
+---
+🎥 *The.Wild.Robot.2024.2160p.UHD.BluRay.TrueHD.7.1.Atmos.HDR10P.DV.x265-SPHD*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.UHD.2160p.4K.BluRay.HDR.DTS.x265.-HDRINVASION*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E02.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.DV.HDR.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E03.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E04.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E05.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E06.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E07.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E08.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E09.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E10.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.DV.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-23 13:33:20] [Information] Telegram: 'Hello George!' sent to -1001218488253.
+[2026-01-23 13:33:21] [Information] Telegram: 'Hello George!' sent to -1001218488253.
+[2026-01-23 13:33:22] [Information] Telegram: 'Hello George!' sent to -1001218488253.
+[2026-01-23 13:35:01] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Jurassic.Park.1993.REPACK.BluRay.1080p.DTS-X.7.1.VC-1.HYBRID.REMUX-FraMeSToR*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.One.2021.1080p.BluRay.REMUX.AVC.H.264.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Sisu.Road.To.Revenge.2025.1080p.WEB-DL.DUAL.DDP5.1.H.264-TURG*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01.1080p.BluRay.x264-BORDURE*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01.1080p.BluRay.x264-BORDURE*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E01.Good.News.About.Hell.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E02.Half.Loop.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E03.In.Perpetuity.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E04.The.You.You.Are.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E05.The.Grim.Barbarity.Of.Optics.and.Design.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E06.Hide.and.Seek.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E07.Defiant.Jazz.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E08.Whats.for.Dinner.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E09.The.We.We.Are.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S02.1080p.10bit.WEBRip.6CH.x265-PSA*
+⚙️ Status: QUEUED
+---
+🎥 *The.Wild.Robot.2024.2160p.UHD.BluRay.TrueHD.7.1.Atmos.HDR10P.DV.x265-SPHD*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.UHD.2160p.4K.BluRay.HDR.DTS.x265.-HDRINVASION*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E02.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.DV.HDR.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E03.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E04.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E05.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E06.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E07.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E08.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E09.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E10.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.DV.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.Two.2024.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-23 13:56:44] [Information] Telegram: '💾 *Disk Space Report*
+
+Drive        Used  Available Use%
+-----        ----  --------- ----
+Local (sda1) 20G   369G      5%
+NAS (NFS)    1016G 2,6T      28%
+
+' sent to -1001218488253.
+[2026-01-23 14:58:08] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Sisu.Road.To.Revenge.2025.1080p.WEB-DL.DUAL.DDP5.1.H.264-TURG*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 66.5%
+---
+🎥 *Severance.S01.1080p.BluRay.x264-BORDURE*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01.1080p.BluRay.x264-BORDURE*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E01.Good.News.About.Hell.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E02.Half.Loop.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E03.In.Perpetuity.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E04.The.You.You.Are.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E05.The.Grim.Barbarity.Of.Optics.and.Design.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E06.Hide.and.Seek.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E07.Defiant.Jazz.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E08.Whats.for.Dinner.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S01E09.The.We.We.Are.1080p.BluRay.10Bit.DDP5.1.H265-d3g*
+⚙️ Status: QUEUED
+---
+🎥 *Severance.S02.1080p.10bit.WEBRip.6CH.x265-PSA*
+⚙️ Status: QUEUED
+---
+🎥 *The.Wild.Robot.2024.2160p.UHD.BluRay.TrueHD.7.1.Atmos.HDR10P.DV.x265-SPHD*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.UHD.2160p.4K.BluRay.HDR.DTS.x265.-HDRINVASION*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E02.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.DV.HDR.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E03.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E04.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E05.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E06.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E07.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E08.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E09.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E10.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.DV.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.Two.2024.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.One.2021.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-23 16:29:44] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Wild.Robot.2024.2160p.UHD.BluRay.TrueHD.7.1.Atmos.HDR10P.DV.x265-SPHD*
+⚙️ Status: PAUSED
+---
+🎥 *The.Dark.Knight.2008.UHD.2160p.4K.BluRay.HDR.DTS.x265.-HDRINVASION*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E02.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.DV.HDR.H.265-NTb*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E03.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E04.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E05.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E06.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E07.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.2023.S01E08.2160p.WEB.H265-NHTFS*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.2023.S01E09.2160p.WEB.H265-NHTFS*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.2023.S01E10.2160p.WEB.H265-NHTFS*
+⚙️ Status: PAUSED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.DV.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: PAUSED
+---
+🎥 *Dune.Part.Two.2024.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: PAUSED
+---
+🎥 *Dune.Part.One.2021.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: PAUSED
+---
+' sent to -1001218488253.
+[2026-01-23 16:32:24] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Wild.Robot.2024.2160p.UHD.BluRay.TrueHD.7.1.Atmos.HDR10P.DV.x265-SPHD*
+⚙️ Status: PAUSED
+---
+🎥 *The.Dark.Knight.2008.UHD.2160p.4K.BluRay.HDR.DTS.x265.-HDRINVASION*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E02.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.DV.HDR.H.265-NTb*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E03.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E04.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E05.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E06.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.S01E07.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.2023.S01E08.2160p.WEB.H265-NHTFS*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.2023.S01E09.2160p.WEB.H265-NHTFS*
+⚙️ Status: PAUSED
+---
+🎥 *Platonic.2023.S01E10.2160p.WEB.H265-NHTFS*
+⚙️ Status: PAUSED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.DV.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: PAUSED
+---
+🎥 *Dune.Part.Two.2024.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: PAUSED
+---
+🎥 *Dune.Part.One.2021.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: PAUSED
+---
+' sent to -1001218488253.
+[2026-01-23 18:14:22] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *The.Wild.Robot.2024.2160p.UHD.BluRay.TrueHD.7.1.Atmos.HDR10P.DV.x265-SPHD*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.UHD.2160p.4K.BluRay.HDR.DTS.x265.-HDRINVASION*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E02.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E01.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.DV.HDR.H.265-NTb*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E03.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E04.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E05.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E06.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E07.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E08.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E09.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E10.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.DV.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.Two.2024.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.One.2021.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-23 18:20:41] [Information] Telegram: '
+Container Name CPU % Memory Usage Memory % Status
+-------------- ----- ------------ -------- ------
+pihole         0.11% 24.09MiB     0.41%    Running
+glances        0.15% 85.97MiB     1.45%    Running
+homepage       0.05% 101.9MiB     1.72%    Running
+nzbget         0.09% 74.01MiB     1.25%    Running
+bazarr         0.17% 240.3MiB     4.05%    Running
+jellyfin       0.01% 702.5MiB     11.85%   Running
+sonarr         0.04% 279.9MiB     4.72%    Running
+prowlarr       0.04% 150.3MiB     2.54%    Running
+radarr         0.06% 238.5MiB     4.02%    Running
+jellyseerr     0.00% 251.5MiB     4.24%    Running
+
+' sent to -1001218488253.
+[2026-01-23 20:12:22] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Platonic.S01E04.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 0%
+---
+🎥 *Platonic.S01E05.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E06.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.S01E07.2025.2160p.NF.WEB-DL.DDP5.1.H.265-HHWEB*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E08.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E09.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Platonic.2023.S01E10.2160p.WEB.H265-NHTFS*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.to.the.Moon.2024.REPACK.DV.2160p.WEB.H265-HappyMoonDay*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.Two.2024.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.One.2021.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *The.Dark.Knight.2008.2160p.UHD.BluRay.DTS-HD.MA.5.1.DV.x265-W4NK3R*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01.2160p.ATVP.WEB-DL.DDP5.1.DV.H.265-NTb*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-24 05:26:01] [Information] Telegram: '
+Container Name    CPU %  Memory Usage Memory % Status
+--------------    -----  ------------ -------- ------
+speedtest-tracker 28.73% 192.2MiB     3.24%    Running
+pihole            0.31%  19.53MiB     0.33%    Running
+glances           0.16%  75.03MiB     1.27%    Running
+homepage          0.00%  135.7MiB     2.29%    Running
+nzbget            11.09% 2.126GiB     36.73%   Running
+bazarr            0.52%  246.8MiB     4.16%    Running
+jellyfin          0.02%  627.1MiB     10.58%   Running
+sonarr            5.38%  272.6MiB     4.60%    Running
+prowlarr          0.12%  149.2MiB     2.52%    Running
+radarr            3.54%  252.1MiB     4.25%    Running
+jellyseerr        1.87%  260.1MiB     4.39%    Running
+
+' sent to -1001218488253.
+[2026-01-24 05:27:49] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Chief.of.War.S01E08.The.Sacred.Niu.Grove.2160p.ATVP.WEB-DL.DDP5.1.Atmos.HDR.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01E09.The.Black.Desert.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: QUEUED
+---
+🎥 *Fly.Me.To.The.Moon.2024.REPACK.2160p.AMZN.WEB-DL.DDP5.1.Atmos.H.265-FLUX-Scrambled*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.One.2021.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.Two.2024.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01E02.Changing.Tides.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-FLUX*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-24 05:52:00] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Chief.of.War.S01E09.The.Black.Desert.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-STC*
+⚙️ Status: DOWNLOADING
+⏬ Downloaded: 25.7%
+---
+🎥 *Fly.Me.To.The.Moon.2024.REPACK.2160p.AMZN.WEB-DL.DDP5.1.Atmos.H.265-FLUX-Scrambled*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.One.2021.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Dune.Part.Two.2024.1080p.BluRay.REMUX.AVC.TrueHD.Atmos.7.1-MrTentsaw*
+⚙️ Status: QUEUED
+---
+🎥 *Chief.of.War.S01E02.Changing.Tides.2160p.ATVP.WEB-DL.DDP5.1.Atmos.H.265-FLUX*
+⚙️ Status: QUEUED
+---
+' sent to -1001218488253.
+[2026-01-24 06:00:26] [Information] Telegram: '
+Container Name    CPU % Memory Usage Memory % Status
+--------------    ----- ------------ -------- ------
+speedtest-tracker 1.08% 200.9MiB     3.39%    Running
+pihole            0.11% 19.53MiB     0.33%    Running
+glances           0.18% 80.35MiB     1.36%    Running
+homepage          0.00% 103.9MiB     1.75%    Running
+nzbget            0.00% 1.321GiB     22.83%   Running
+bazarr            0.17% 251.3MiB     4.24%    Running
+jellyfin          0.00% 627.4MiB     10.59%   Running
+sonarr            0.05% 279.1MiB     4.71%    Running
+prowlarr          0.04% 152.4MiB     2.57%    Running
+radarr            0.04% 244.2MiB     4.12%    Running
+jellyseerr        0.00% 267.3MiB     4.51%    Running
+
+' sent to -1001218488253.
+[2026-01-24 12:09:57] [Information] Telegram: '✅ No active downloads in NZBGet.' sent to -1001218488253.
+[2026-01-24 12:10:03] [Information] Telegram: '
+Container Name    CPU %  Memory Usage Memory % Status
+--------------    -----  ------------ -------- ------
+speedtest-tracker 0.00%  191MiB       3.22%    Running
+pihole            0.12%  10.64MiB     0.18%    Running
+glances           21.53% 86.52MiB     1.46%    Running
+homepage          0.00%  141.9MiB     2.39%    Running
+nzbget            0.03%  1.997GiB     34.50%   Running
+bazarr            0.11%  256.2MiB     4.32%    Running
+jellyfin          0.02%  632MiB       10.66%   Running
+sonarr            0.06%  303.8MiB     5.13%    Running
+prowlarr          4.54%  161.4MiB     2.72%    Running
+radarr            7.66%  283.3MiB     4.78%    Running
+jellyseerr        0.03%  255.2MiB     4.31%    Running
+
+' sent to -1001218488253.
+[2026-01-24 15:37:50] [Information] Telegram: '📥 *NZBGet Active Queue:*
+
+🎥 *Greenland.2020.REMUX.1080p.Blu-ray.AVC.DTS-HD.MA.5.1-LEGi0N*
+⚙️ Status: UNPACKING
+📦 `Processing...` 
+⏳ Progress: [■■□□□□□□□□] 26%
+---
+' sent to -1001218488253.
