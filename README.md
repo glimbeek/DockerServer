@@ -168,11 +168,13 @@ Script contents:
     rsync -av --delete \
       --exclude='**/cache' \
       --exclude='**/Transcodes' \
+      --exclude='nzbget/intermediate' \
       "$SOURCE_DIR/" "$BACKUP_DEST/latest_sync/"
 
     tar -czf "$BACKUP_DEST/docker_backup_$DATE.tar.gz" \
       --exclude='*/cache' \
       --exclude='*/Transcodes' \
+      --exclude='nzbget/intermediate' \
       -C "$SOURCE_DIR" .
 
     docker compose start
@@ -184,6 +186,14 @@ Script contents:
 Make executable:
 
     chmod +x /home/glimby/docker/backup_docker.sh
+
+Test the script:
+
+    sudo systemctl start docker-backup.service # Since the script stops your containers, your media stack will go offline for a minute or two.
+
+To watch exactly what's happening open a second terminal window and run:
+
+    journalctl -u docker-backup.service -f
 
 ### systemd Service
 
