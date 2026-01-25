@@ -12,12 +12,6 @@
 
 ---
 
-## Installation Requirements
-
-Before running docker compose up -d, ensure the following components are installed on the Ubuntu bare metal host.
-
----
-
 ## 1. System Preparation
 
 ### 1.1 Update the System
@@ -87,6 +81,18 @@ Enable SMART monitoring:
 
     sudo systemctl enable --now smartd
 
+### 2.5 NZBget intermediate folder and permissions
+Ensure the directory exists
+
+    mkdir -p /home/glimby/docker/nzbget/intermediate
+
+Grant ownership to your user ID (1000)
+
+    sudo chown -R 1000:1000 /home/glimby/docker/nzbget/intermediate
+
+Set read/write permissions
+
+    sudo chmod -R 775 /home/glimby/docker/nzbget/intermediate
 ---
 
 ## 3. Project Directory Setup
@@ -216,6 +222,55 @@ Activate:
 
 ---
 
+### Restore script
+
+    nano /home/glimby/docker/restore_docker.sh
+
+Script contents:
+
+    #!/bin/bash
+
+    SOURCE_DIR="/home/glimby/docker"
+    BACKUP_DEST="/mnt/nas_streaming/Backups/DockerContainers"
+
+    # 1. List available backups so you can choose
+    echo "Available backups in $BACKUP_DEST:"
+    ls -lh "$BACKUP_DEST"/*.tar.gz
+    echo ""
+    read -p "Enter the full filename of the backup you want to restore (e.g., docker_backup_2024-01-20_0300.tar.gz): " SELECTED_BACKUP
+
+    # 2. Safety Check
+    if [ ! -f "$BACKUP_DEST/$SELECTED_BACKUP" ]; then
+        echo "Error: Backup file not found!"
+        exit 1
+    fi
+
+    read -p "WARNING: This will stop your containers and overwrite $SOURCE_DIR. Proceed? (y/n): " CONFIRM
+    if [[ $CONFIRM != "y" ]]; then
+        echo "Restore cancelled."
+        exit 1
+    fi
+
+    # 3. Stop Docker
+    echo "Stopping Docker containers..."
+    cd "$SOURCE_DIR"
+    docker compose stop
+
+    # 4. Clear current config (Optional but recommended to prevent mixing old/new files)
+    # We keep the backup script itself and the .env if they exist outside the archive
+    echo "Cleaning up current directory..."
+    find "$SOURCE_DIR" -mindepth 1 -not -name 'restore_docker.sh' -not -name 'backup_docker.sh' -delete
+
+    # 5. Extract the backup
+    echo "Restoring files from $SELECTED_BACKUP..."
+    tar -xzf "$BACKUP_DEST/$SELECTED_BACKUP" -C "$SOURCE_DIR"
+
+    # 6. Restart Docker
+    echo "Starting Docker containers..."
+    docker compose up -d
+
+    echo "Restore complete."
+
 ## 7. Useful Commands
 
 Docker container versions:
@@ -231,3 +286,7 @@ Docker container IP addresses:
       echo -n "$container: "
       docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$container"
     done
+
+Copy .env file to Linux host
+
+    scp .env glimby@192.168.0.45:/home/glimby/docker/
