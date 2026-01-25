@@ -4,6 +4,8 @@
 *.logs
 *_old
 *.db
+bot_log.txt*
+tg_offset.txt
 
 # ignore folders
 _old/

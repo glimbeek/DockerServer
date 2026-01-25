@@ -7,6 +7,12 @@ x-lsiodefaults: &lsio-defaults # Define a reusable template
     - TZ=${TIMEZONE}
 
 services:
+  ##############################
+  #                            #
+  # --- Other stuff ---        #  
+  #                            #
+  ##############################
+  # --- Network-wide ad blocker ---
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
@@ -49,6 +55,23 @@ services:
       # Optional, if Pi-hole should get some more processing time
       #- SYS_NICE
     restart: unless-stopped
+
+# --- Home Automation ---
+  domoticz:
+    image: domoticz/domoticz:stable
+    container_name: domoticz
+    restart: unless-stopped
+    ports:
+      - "8081:8080" # Mapping to 8081 so it doesn't clash with Pi-hole/Jellyfin
+    volumes:
+      - ./config/domoticz:/opt/domoticz/userdata
+    environment:
+      - TZ=${TIMEZONE}
+      - PUID=${PUID}
+      - PGID=${PGID}
+    # If you have a USB Zigbee/Z-Wave stick, uncomment below:
+    # devices:
+    #   - "/dev/ttyUSB0:/dev/ttyUSB0"
 
   ##############################
   #                            #
@@ -195,3 +218,4 @@ services:
       - DISPLAY_TIMEZONE=${TIMEZONE}
     volumes:
       - ./speedtest-config:/config
+

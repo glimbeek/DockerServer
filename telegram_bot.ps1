@@ -23,7 +23,6 @@ else {
 
 # --- Global Configuration ---
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-#$botToken = "1878834395:AAFGDpYLWkg-OelD78jvBVXSe6UrqYAXHvo" # Do NOT Share This Key!!
 $botToken = $env:TG_BOT_TOKEN
 $TelegramApiUri = "https://api.telegram.org/bot" + $botToken
 $ChatID = $env:TG_CHAT_ID
