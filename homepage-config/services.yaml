@@ -38,6 +38,15 @@
           type: sonarr
           url: http://sonarr:8989
           key: {{HOMEPAGE_VAR_SONARR_KEY}}
+    # - Profilarr:
+    #     icon: profilarr.png
+    #     href: http://192.168.0.45:6868
+    #     description: Arr Config Management
+    #     server: my-server
+    #     container: profilarr
+    #     widget:
+    #       type: profilarr
+    #       url: http://profilarr:6868
     - Bazarr:
         icon: bazarr.png
         href: http://192.168.0.45:6767
