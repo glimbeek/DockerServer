@@ -34,7 +34,7 @@ services:
   immich-server:
     <<: *lsio-defaults # Use the reusable template, ignores PUID/PGID
     container_name: immich_server
-    image: ghcr.io/immich-app/immich-server:${IMMICH_VERSION}
+    image: ghcr.io/immich-app/immich-machine-learning:${IMMICH_VERSION:-release}
     devices:
       - /dev/dri:/dev/dri  # CRITICAL: This enables hardware acceleration for the CPU
     group_add:
@@ -55,7 +55,7 @@ services:
   immich-machine-learning:
     <<: *lsio-defaults # Use the reusable template
     container_name: immich_machine_learning
-    image: ghcr.io/immich-app/immich-machine-learning:${IMMICH_VERSION}
+    image: ghcr.io/immich-app/immich-machine-learning:${IMMICH_VERSION:-release}
     volumes:
       - ./config/immich/model-cache:/cache
     env_file:
@@ -64,11 +64,13 @@ services:
   redis:
     <<: *lsio-defaults # Use the reusable template
     container_name: immich_redis
-    image: docker.io/redis:${REDIS_VERSION}
+    #image: docker.io/redis:${REDIS_VERSION}
+    image: docker.io/valkey/valkey:9@sha256:546304417feac0874c3dd576e0952c6bb8f06bb4093ea0c9ca303c73cf458f63
 
   database:
     container_name: immich_postgres
-    image: docker.io/tensorchord/pgvecto-rs:${DB_VERSION}
+    #image: docker.io/tensorchord/pgvecto-rs:${DB_VERSION}
+    image: ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0@sha256:bcf63357191b76a916ae5eb93464d65c07511da41e3bf7a8416db519b40b1c23
     environment:
       POSTGRES_PASSWORD: ${DB_PASSWORD} # Because the devs from Immich are annoying they won't let you change the variable name to IMMICH_DB_PASSWORD
       POSTGRES_USER: ${DB_USERNAME} # Because the devs from Immich are annoying they won't let you change the variable name to IMMICH_DB_USERNAME
@@ -92,7 +94,7 @@ services:
       - TS_STATE_DIR=/var/lib/tailscale
       - TS_USERSPACE=false
     volumes:
-      - ./tailscale/data:/var/lib/tailscale
+      - .config/tailscale/data:/var/lib/tailscale
       - /dev/net/tun:/dev/net/tun
     cap_add:
       - NET_ADMIN
@@ -109,8 +111,8 @@ services:
       - '81:81'   # Admin UI
       - '443:443' # HTTPS
     volumes:
-      - ./npm/data:/data
-      - ./npm/letsencrypt:/etc/letsencrypt
+      - ./config/npm/data:/data
+      - ./config/npm/letsencrypt:/etc/letsencrypt
 
   # --- Network-wide ad blocker ---
   pihole:
@@ -143,7 +145,7 @@ services:
     # Volumes store your data between container upgrades
     volumes:
       # For persisting Pi-hole's databases and common configuration file
-      - './etc-pihole:/etc/pihole'
+      - './config/etc-pihole:/etc/pihole'
       # Uncomment the below if you have custom dnsmasq config files that you want to persist. Not needed for most starting fresh with Pi-hole v6. If you're upgrading from v5 you and have used this directory before, you should keep it enabled for the first v6 container start to allow for a complete migration. It can be removed afterwards. Needs environment variable FTLCONF_misc_etc_dnsmasq_d: 'true'
       #- './etc-dnsmasq.d:/etc/dnsmasq.d'
     #cap_add:
@@ -261,10 +263,26 @@ services:
     volumes:
       - ./config/nzbget:/config # Configuration files
       - ${MEDIA_DIR}:/data # The final media storage location
-      - ./nzbget/intermediate:/scratch # The SSD (Fast) download folder for unpacking
+      - ./config/nzbget/intermediate:/scratch # The SSD (Fast) download folder for unpacking
     ports:
       - 6789:6789
 
+# --- Ebook Manager ---
+  calibre:
+    <<: *lsio-defaults # Use the reusable template
+    image: lscr.io/linuxserver/calibre:${CALIBRE_VERSION}
+    container_name: calibre
+    security_opt:
+      - seccomp:unconfined #optional
+    volumes:
+      - /path/to/calibre/config:/config
+      - ${MEDIA_DIR}/Epubs:/epubs
+    ports:
+      - 8880:8080
+      - 8181:8181
+      - 8881:8081
+    shm_size: "1gb"
+    restart: unless-stopped
 
   # # System Services
   #
@@ -285,6 +303,31 @@ services:
       devices:
         - /dev/dri:/dev/dri
 
+# --- Dashboard ---
+  portainer:
+    image: portainer/portainer-ce:${PORTAINER_VERSION}
+    container_name: portainer
+    restart: always
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./config/portainer:/data
+    ports:
+      - 9443:9443
+      - 8000:8000
+
+# # --- Watchtower: Auto-updates containers ---
+#   watchtower:
+#     <<: *lsio-defaults # Use the reusable template, ignores PUID/PGID
+#     image: beatkind/watchtower
+#     container_name: watchtower
+#     environment:
+#       - watchtower.monitor-only=true
+#     volumes:
+#       - /var/run/docker.sock:/var/run/docker.sock
+
   # --- Speedtest Tracker ---
   # Default username/password admin@example.com/password
   speedtest-tracker:
@@ -304,7 +347,7 @@ services:
       - SPEEDTEST_SCHEDULE=0 */6 * * * # Runs every 6 hours
       - DISPLAY_TIMEZONE=${TIMEZONE}
     volumes:
-      - ./speedtest-config:/config
+      - ./config/speedtest-config:/config
 
   # --- Arr Stack Dashboard ---
   homepage:

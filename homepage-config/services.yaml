@@ -38,15 +38,20 @@
           type: sonarr
           url: http://sonarr:8989
           key: {{HOMEPAGE_VAR_SONARR_KEY}}
-    # - Profilarr:
-    #     icon: profilarr.png
-    #     href: http://192.168.0.45:6868
-    #     description: Arr Config Management
-    #     server: my-server
-    #     container: profilarr
-    #     widget:
-    #       type: profilarr
-    #       url: http://profilarr:6868
+    - Profilarr:
+        icon: profilarr.png
+        href: http://192.168.0.45:6868
+        description: Quality Profile Manager
+        siteMonitor: http://profilarr:6868
+        server: my-server
+        container: profilarr
+    - Huntarr:
+        icon: huntarr.png
+        href: http://192.168.0.45:9705
+        description: Media Search Aggregator
+        siteMonitor: http://huntarr:9705
+        server: my-server
+        container: huntarr
     - Bazarr:
         icon: bazarr.png
         href: http://192.168.0.45:6767
@@ -95,6 +100,14 @@
             url: http://nzbget:6789
             username: {{HOMEPAGE_VAR_NZBGET_USER}}
             password: {{HOMEPAGE_VAR_NZBGET_PASS}}
+
+    - Calibre-Web:
+        icon: calibre-web.png
+        href: https://192.168.0.45:8181
+        description: eBook Management
+        siteMonitor: http://calibre-web:8181
+        server: my-server
+        container: calibre
 
 - Media Management:
     - Jellyfin:
@@ -191,6 +204,14 @@
             url: http://192.168.0.45:81
             username: {{HOMEPAGE_VAR_NPM_USER}}
             password: {{HOMEPAGE_VAR_NPM_PASS}}
+
+    - Portainer:
+        icon: portainer.png
+        href: https://192.168.0.45:9443
+        description: Container Management
+        siteMonitor: http://portainer:9000
+        server: my-server
+        container: portainer
 
 - Smart Home Sensors:
     - Power Usage:

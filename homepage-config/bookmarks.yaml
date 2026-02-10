@@ -2,7 +2,3 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/bookmarks
 
-- Bookmarks:
-    - Folding@Home:
-        - abbr: FAH
-          href: http://192.168.0.45:7396

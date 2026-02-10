@@ -13,7 +13,7 @@ layout:
   Arr Services:
     header: false
     style: row
-    columns: 4
+    columns: 3
 
   File Management:
     header: false
